@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="cust1" src="customer-1.jpg" alt="photoshop"></li>
+            <li><img width="200px" id="cust2" src="customer-2.jpg" alt=""></li>
+            <li><img width="200px" id="cust3" src="customer-3.jpg" alt=""></li>
+            <li><img width="200px" id="cust4" src="customer-4.jpg" alt="" ></li>
+            <li><img width="200px" id="cust5" src="customer-5.jpg" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+        //document.getElementById('cust4').onclick=function(){
+          //  alert("Customer 4 clicked")
+       // }
+        //attachEvent()
+       //jQuery- on
+      //important event
+      //type, timestamp, defaultPrevented
+      //target, toElement,srcElement,currentTarget
+      //clientX,clientY, screenX, screenY
+      //altkey, ctrlkey, shiftkey, keyCode
+       /*
+       document.getElementById('images').addEventListener('click',function(e){
+                 console.log("clicked inside the ul")
+        },false)
+
+       document.getElementById('cust4').addEventListener('click',function(e){
+       // alert("Customer 4 Clicked")
+          console.log("Customer 4 Clicked")
+          e.stopPropagation()
+       },false)
+ 
+      document.getElementById('google').addEventListener('click',function(e){
+        e.preventDefault();
+        e.stopPropagation()
+        console.log("Google clicked")
+       
+      }, false)
+      */
+
+     document.querySelector('#images').addEventListener('click',function(e){
+        console.log(e.target.parentNode)
+
+        if(e.target.tagName==='IMG'){
+            console.log(e.target.id)
+            let removeIt= e.target.parentNode
+            removeIt.remove()  
+        }
+       
+        //removeIt.parentNode.removeChild(removeIt)
+     })
+
+</script>
+</html>

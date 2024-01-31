@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family:"Roboto", sans-serif;
+            background-color: black;
+            font-size: 16px;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn{
+            color: #fff;
+            padding: 8px 16px;
+            text-decoration: none;
+            border: 1px solid #fff;
+            position: relative;
+            display: inline-block;
+            transition: all 0.5s ease-in 0s;
+        }
+         
+        
+        .btn::after{
+            content: " ";
+            background-color: #23cd61;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            z-index: -1;
+            transition: all .5s ease-in 0s;
+        }
+        .btn:hover{
+            color: #fff;
+            border: 2px solid orangered;
+        }
+
+        .btn:hover::after{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <a href="" class="btn">Click Me</a>
+</body>
+</html>

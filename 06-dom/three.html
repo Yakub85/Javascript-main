@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        .bg-color{
+            background-color:#0b0b0b;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-color">
+    
+    <script>
+      const div= document.createElement('div')
+      console.log(div)
+      div.className="main"
+      div.id=Math.round(Math.random()*10 +1)
+      div.setAttribute("title","yakub")
+      div.style.backgroundColor="green"
+      div.style.padding='12px'
+     // div.innerText = "Chai aur Code"
+      const addText=document.createTextNode("Chai aur code")
+      div.append(addText)
+      document.body.append(div)
+        nm 
+    </script>
+</body>
+</html>
